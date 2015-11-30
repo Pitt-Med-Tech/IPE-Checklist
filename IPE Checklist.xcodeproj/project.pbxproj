@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20484BCE1C0A1C060073E909 /* listItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484BCD1C0A1C060073E909 /* listItemsTableViewController.swift */; };
+		20484BD21C0A49B80073E909 /* examTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484BD11C0A49B80073E909 /* examTableViewController.swift */; };
+		20484BD41C0AAC010073E909 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20484BD31C0AAC010073E909 /* NavViewController.swift */; };
 		20B4DDB31C097F2C00D18932 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4DDB21C097F2C00D18932 /* AppDelegate.swift */; };
 		20B4DDB51C097F2C00D18932 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B4DDB41C097F2C00D18932 /* ViewController.swift */; };
 		20B4DDB81C097F2C00D18932 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B4DDB61C097F2C00D18932 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20484BCD1C0A1C060073E909 /* listItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = listItemsTableViewController.swift; path = ../listItemsTableViewController.swift; sourceTree = "<group>"; };
+		20484BD11C0A49B80073E909 /* examTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = examTableViewController.swift; sourceTree = "<group>"; };
+		20484BD31C0AAC010073E909 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		20B4DDAF1C097F2C00D18932 /* IPE Checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPE Checklist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B4DDB21C097F2C00D18932 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20B4DDB41C097F2C00D18932 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +103,12 @@
 		20B4DDB11C097F2C00D18932 /* IPE Checklist */ = {
 			isa = PBXGroup;
 			children = (
+				20484BCD1C0A1C060073E909 /* listItemsTableViewController.swift */,
+				20484BD11C0A49B80073E909 /* examTableViewController.swift */,
 				20B4DDB21C097F2C00D18932 /* AppDelegate.swift */,
 				20B4DDB41C097F2C00D18932 /* ViewController.swift */,
 				20B4DDB61C097F2C00D18932 /* Main.storyboard */,
+				20484BD31C0AAC010073E909 /* NavViewController.swift */,
 				20B4DDB91C097F2C00D18932 /* Assets.xcassets */,
 				20B4DDBB1C097F2C00D18932 /* LaunchScreen.storyboard */,
 				20B4DDBE1C097F2C00D18932 /* Info.plist */,
@@ -256,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20484BCE1C0A1C060073E909 /* listItemsTableViewController.swift in Sources */,
+				20484BD41C0AAC010073E909 /* NavViewController.swift in Sources */,
 				20B4DDB51C097F2C00D18932 /* ViewController.swift in Sources */,
+				20484BD21C0A49B80073E909 /* examTableViewController.swift in Sources */,
 				20B4DDB31C097F2C00D18932 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +494,7 @@
 				20B4DDD91C097F2C00D18932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B4DDDA1C097F2D00D18932 /* Build configuration list for PBXNativeTarget "IPE ChecklistTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				20B4DDDC1C097F2D00D18932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B4DDDD1C097F2D00D18932 /* Build configuration list for PBXNativeTarget "IPE ChecklistUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				20B4DDDF1C097F2D00D18932 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
