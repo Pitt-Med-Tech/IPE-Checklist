@@ -22,16 +22,7 @@ class examTableViewController: UITableViewController, sendListItems {
     
     var data: Array<String> = Array()
     var listTitle: String = String()
-    var examSelectedInNextVC = String()
-    var itemSelectedInNextVC = [Bool]()
     
-    //Make list of bools for each exam in order to maintain state
-    var entItemsSelected = [Bool]()
-    var neuroItemsSelected = [Bool]()
-    var thoracicItemsSelected = [Bool]()
-    var abdominalItemsSelected = [Bool]()
-    var musculoskeletalItemsSelected = [Bool]()
-    var otherItemsSelected = [Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +32,6 @@ class examTableViewController: UITableViewController, sendListItems {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        var entItemsSelected = [Bool](count: entList.count, repeatedValue: false)
-        var neuroItemsSelected = [Bool](count: neuroList.count, repeatedValue: false)
-        var thoracicItemsSelected = [Bool](count: thoracicList.count, repeatedValue: false)
-        var abdominalItemsSelected = [Bool](count: abdominalList.count, repeatedValue: false)
-        var musculoskeletalItemsSelected = [Bool](count: musculoskeletalList.count, repeatedValue: false)
-        var otherItemsSelected = [Bool](count: otherList.count, repeatedValue: false)
 
     }
 
@@ -57,28 +41,7 @@ class examTableViewController: UITableViewController, sendListItems {
     }
     
     func sendListItemsBack(itemsSentBack: Array<Bool>, examSelected: String) {
-        examSelectedInNextVC = examSelected
-        itemSelectedInNextVC = itemsSentBack
-        //Get id of array back from next view controller (switch)
-        print(examSelected)
-        
-        switch examSelectedInNextVC {
-        case "ENT":
-            entItemsSelected = itemSelectedInNextVC
-        case "Neuro":
-            neuroItemsSelected = itemSelectedInNextVC
-        case "Thoracic":
-            thoracicItemsSelected = itemSelectedInNextVC
-        case "Abdominal":
-            abdominalItemsSelected = itemSelectedInNextVC
-        case "Musculoskeletal":
-            musculoskeletalItemsSelected = itemSelectedInNextVC
-        case "Other":
-            otherItemsSelected = itemSelectedInNextVC
-        default:
-            itemSelectedInNextVC = [Bool](count: 100, repeatedValue: false)
-        }
-        
+        //placeholder for future delegate actions
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -87,27 +50,21 @@ class examTableViewController: UITableViewController, sendListItems {
         case "entSegue"?:
             data = entList
             listTitle = "ENT"
-            itemSelectedInNextVC = entItemsSelected
         case "neuroSegue"?:
             data = neuroList
             listTitle = "Neuro"
-            itemSelectedInNextVC = neuroItemsSelected
         case "thoracicSegue"?:
             data = thoracicList
             listTitle = "Thoracic"
-            itemSelectedInNextVC = thoracicItemsSelected
         case "abdominalSegue"?:
             data = abdominalList
             listTitle = "Abdominal"
-            itemSelectedInNextVC = abdominalItemsSelected
         case "musculoskeletalSegue"?:
             data = musculoskeletalList
             listTitle = "Musculoskeletal"
-            itemSelectedInNextVC = musculoskeletalItemsSelected
         case "otherSegue"?:
             data = otherList
             listTitle = "Other"
-            itemSelectedInNextVC = otherItemsSelected
         default:
             data = []
             listTitle = "No exam selected"
@@ -119,9 +76,11 @@ class examTableViewController: UITableViewController, sendListItems {
         
         view2.data2 = data
         view2.listTitle2 = listTitle
+        //for future delegate commands
         view2.listItemsDelegate = self
         
-        view2.itemSelected = itemSelectedInNextVC
+        //Instantiate array length to whatever the number of table rows is
+        view2.itemSelected = [Bool](count: data.count, repeatedValue: false)
         
     }
 

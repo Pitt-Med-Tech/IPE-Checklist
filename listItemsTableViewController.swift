@@ -61,18 +61,7 @@ class listItemsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("listItem", forIndexPath: indexPath)
 
         // Configure the cell...
-        //This might break
         cell.textLabel?.text = data2[indexPath.row] as String
-        
-        if itemSelected[indexPath.row] == true {
-            itemSelected[indexPath.row] = false
-            cell.textLabel?.alpha = 1.0
-        }
-        else if itemSelected[indexPath.row] == false {
-            itemSelected[indexPath.row] = true
-            cell.textLabel?.alpha = 0.2
-        }
-
         
         return cell
     }
